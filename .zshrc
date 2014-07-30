@@ -36,6 +36,6 @@ PROMPT="%{$fg_bold[red]%}%n@%M%{$fg_bold[blue]%}:%{$fg_no_bold[green]%}%~%{$fg_b
 # auto update window title
 case $TERM in
   *xterm*)
-    precmd () {print -Pn "\e]0;%n@andeb: %~\a"}
+    precmd () {print -Pn "\e]0;%n@%M: %~\a"}
   ;;
 esac
