@@ -20,9 +20,14 @@ compdef _gnu_generic cfdisk fdisk df udisks free more mv wc head tail tee \
     transmission-remote transmission-cli transmission-create transmission-daemon \
     transmission-edit transmission-remote transmission-show
 
+# replace /home/michele with your home dir
 zstyle :compinstall filename '/home/michele/.zshrc'
+
+# matchers for autocompletion (that is case insensitive)
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*:*:git:files' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+# arrow key selection for completions
 zstyle ':completion:*' menu select
 
 # simple color prompt (debian style user@hostname:pwd$) 
