@@ -20,9 +20,7 @@ compdef _gnu_generic cfdisk fdisk df udisks free more mv wc head tail tee \
     transmission-remote transmission-cli transmission-create transmission-daemon \
     transmission-edit transmission-remote transmission-show
 
-# replace /home/michele with your home dir
-zstyle :compinstall filename '/home/michele/.zshrc'
-
+zstyle :compinstall filename '~/.zshrc'
 # matchers for autocompletion (that is case insensitive)
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*:*:git:files' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
@@ -39,3 +37,5 @@ case $TERM in
     precmd () {print -Pn "\e]0;%n@%M: %~\a"}
   ;;
 esac
+
+source ~/.zprofile
