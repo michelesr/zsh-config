@@ -4,14 +4,17 @@ HISTSIZE=10000
 SAVEHIST=$HISTSIZE
 
 # general options
-autoload -Uz compinit && compinit
-autoload -U colors && colors
+autoload -Uz compinit; compinit
+autoload -U colors; colors
 setopt histignorealldups incappendhistory completealiases \
-       nocasematch correct autocd extendedglob notify
+       nocasematch correct autocd extendedglob notify \
+       menucomplete sharehistory autocd 
 
-# vim keybinding and ^R for incremental-history-search
+# key bindings
 bindkey -v
 bindkey '^R' history-incremental-search-backward
+bindkey '^[[A' history-beginning-search-backward
+bindkey '^[[B' history-beginning-search-forward
 
 # autogenerate completion for gnu generic commands from --help
 compdef _gnu_generic cfdisk fdisk df udisks free more mv wc head tail tee \
@@ -21,6 +24,10 @@ compdef _gnu_generic cfdisk fdisk df udisks free more mv wc head tail tee \
     transmission-edit transmission-remote transmission-show
 
 zstyle :compinstall filename '~/.zshrc'
+
+# color completions 
+zstyle ':completion:*' list-colors ''
+
 # matchers for autocompletion (that is case insensitive)
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*:*:git:files' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
