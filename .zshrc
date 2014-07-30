@@ -1,13 +1,13 @@
 # history file and size
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=$HISTSIZE
 
 # general options
 autoload -Uz compinit && compinit
 autoload -U colors && colors
-setopt HIST_IGNORE_DUPS completealiases 
-setopt nocasematch correct appendhistory autocd extendedglob notify
+setopt histignorealldups incappendhistory completealiases \
+       nocasematch correct autocd extendedglob notify
 
 # vim keybinding and ^R for incremental-history-search
 bindkey -v
