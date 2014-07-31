@@ -6,9 +6,9 @@ SAVEHIST=$HISTSIZE
 # general options
 autoload -Uz compinit; compinit
 autoload -U colors; colors
-setopt histignorealldups incappendhistory completealiases \
-       nocasematch correct autocd extendedglob notify \
-       menucomplete sharehistory autocd autopushd
+setopt histignorealldups incappendhistory nocasematch \
+       correct autocd extendedglob notify menucomplete \
+       sharehistory autocd autopushd
 
 # key bindings
 bindkey -v
