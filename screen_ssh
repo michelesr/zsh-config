@@ -1,6 +1,5 @@
 # source this to autoload screen on ssh sessions
 if [ "$SSH_CONNECTION" -a "$TERM" != "screen" ]; then
-    export SCR=1 
     screen 
     exit 0
 fi
