@@ -1,0 +1,4 @@
+# source this to reload zshenv on tmux start
+if [[ "$TMUX" && -f ~/.zshenv ]] ; then
+   source ~/.zshenv
+fi

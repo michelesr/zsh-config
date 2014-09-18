@@ -1,4 +1,4 @@
 # source this to autoload tmux on ssh sessions
-if [ "$SSH_CONNECTION" -a "$TERM" != 'screen' -a "$TERM" != 'screen.linux' ] ; then
+if [[ "$SSH_CONNECTION" && ! "$TMUX" ]] ; then
     tmux; exit 0
 fi
