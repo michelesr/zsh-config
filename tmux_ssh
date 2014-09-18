@@ -1,6 +1,4 @@
 # source this to autoload tmux on ssh sessions
 if [ "$SSH_CONNECTION" -a "$TERM" != 'screen' -a "$TERM" != 'screen.linux' ] ; then
     tmux; exit 0
-elif [ -f ~/.zshenv ]; then
-    source ~/.zshenv
 fi
