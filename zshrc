@@ -1,3 +1,5 @@
+source ~/.zprofile
+
 # history file and size
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -46,4 +48,3 @@ PROMPT="%{$fg_bold[red]%}%n@%M%{$fg_bold[blue]%}:%{$fg_no_bold[green]%}%~%{$fg_b
 #  ;;
 # esac
 ##
-source ~/.zprofile
