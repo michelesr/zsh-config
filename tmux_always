@@ -1,6 +1,6 @@
 #! /bin/bash
 
-if [[ ! "$TMUX" ]] ; then
+if [[ "$TMUX" == "" ]] ; then
   if tmux attach; then
     :
   else
