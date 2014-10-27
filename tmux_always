@@ -1,0 +1,5 @@
+#! /bin/bash
+
+if [[ !$TMUX && !$(tmux attach-session) ]] then
+  tmux
+fi
