@@ -39,11 +39,11 @@ zstyle ':completion:*' menu select
 # simple color prompt (debian style user@hostname:pwd$) 
 PROMPT="%{$fg_bold[red]%}%n@%M%{$fg_bold[blue]%}:%{$fg_no_bold[green]%}%~%{$fg_bold[blue]%}$%{$reset_color%} "
 
-# auto update window title
-case $TERM in
-  *xterm*)
-    precmd () {print -Pn "\e]0;%n@%M: %~\a"}
-  ;;
-esac
-
+## auto update window title
+# case $TERM in
+#  *xterm*)
+#    precmd () {print -Pn "\e]0;%n@%M: %~\a"}
+#  ;;
+# esac
+##
 source ~/.zprofile
