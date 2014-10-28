@@ -14,19 +14,29 @@ xclip-aliases
 
 Require: xclip
 
-To install, source xclip_aliases ::
+To install :: 
+	source xclip_aliases
 
-        # copy text to x primary buffer
+To copy text to X primary buffer ::
+
 	echo "ciao" | xin 
-        # copy text to clipboard
-	echo "ciao" | cin 
-	# print x primary buffer
-	xout
-	# print clipboard
-	cout
-	# copy x primary buffer to clipboard
-	xtoc
-	# copy clipboard to x primary buffer
-	ctox
 
+To copy text to clipboard ::
+	echo "ciao" | cin 
+
+To print X primary buffer ::
+
+	xout
+
+To print clipboard ::
+
+	cout
+
+To copy X primary buffer to clipboard ::
+
+	xtoc
+
+To copy clipboard to X primary buffer ::
+
+	ctox
 ..
