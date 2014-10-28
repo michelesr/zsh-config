@@ -1,4 +1,5 @@
-#! /bin/bash
+# Sourcing this will make terminal try to attach a tmux session
+# if session is not present, a new one will start
 
 if [[ "$TMUX" == "" ]] ; then
   if tmux attach; then
