@@ -1,0 +1,7 @@
+# xclip alias
+alias xin='xclip -in -selection primary'
+alias xout='xclip -out -selection primary'
+alias cin='xclip -in -selection clipboard'
+alias cout='xclip -out -selection clipboard'
+alias xtoc='xout | cin'
+alias ctox='cout | xin'
