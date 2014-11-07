@@ -1,0 +1,3 @@
+if tmux list-clients | tail -n 1 | grep st-256color > /dev/null ; then
+    stty erase '^H'
+fi
