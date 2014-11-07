@@ -47,7 +47,7 @@ zstyle ':completion:*:*:git:files' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=
 zstyle ':completion:*' menu select
 
 # simple color prompt (debian style user@hostname:pwd$) 
-PROMPT="%{$fg_bold[red]%}%n@%M%{$fg_bold[blue]%}:%{$fg_no_bold[green]%}%~%{$fg_bold[blue]%}$%{$reset_color%} "
+PROMPT="%{$fg_bold[cyan]%}%~ %{$fg_bold[yellow]%}$%{$reset_color%} "
 
 ## auto update window title
 # case $TERM in
