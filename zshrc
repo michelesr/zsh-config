@@ -13,8 +13,16 @@ setopt histignorealldups incappendhistory correct \
        sharehistory autocd autopushd
 unsetopt nomatch
 
-# key bindings
+# vi key bindings
 bindkey -v
+
+# allow delete over start of insert mode
+bindkey "^W" backward-kill-word    # vi-backward-kill-word
+bindkey "^H" backward-delete-char  # vi-backward-delete-char
+bindkey "^U" kill-line             # vi-kill-line
+bindkey "^?" backward-delete-char  # vi-backward-delete-char
+
+# history key bindings (arrow and ^R)
 bindkey '^R' history-incremental-search-backward
 bindkey '^[[A' history-beginning-search-backward
 bindkey '^[[B' history-beginning-search-forward
