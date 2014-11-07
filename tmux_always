@@ -2,7 +2,7 @@
 # if session is not present, a new one will start
 
 if [[ "$TMUX" == "" ]] ; then
-  if tmux attach; then
+  if tmux attach 2>/dev/null ; then
     :
   else
     tmux
