@@ -46,7 +46,7 @@ zstyle ':completion:*:*:git:files' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=
 # arrow key selection for completions
 zstyle ':completion:*' menu select
 
-# simple color prompt (debian style user@hostname:pwd$) 
+# simple color prompt
 PROMPT="%{$fg_bold[cyan]%}%~ %{$fg_bold[yellow]%}$%{$reset_color%} "
 
 ## auto update window title
