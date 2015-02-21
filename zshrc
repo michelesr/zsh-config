@@ -8,10 +8,8 @@ SAVEHIST=$HISTSIZE
 # general options
 autoload -Uz compinit; compinit
 autoload -U colors; colors
-setopt histignorealldups incappendhistory correct \
-       autocd extendedglob notify menucomplete \
-       sharehistory autocd autopushd
-unsetopt nomatch
+setopt histignorealldups correct autocd \
+       notify menucomplete sharehistory
 
 # vi key bindings
 bindkey -v
@@ -48,11 +46,3 @@ zstyle ':completion:*' menu select
 
 # simple color prompt
 PROMPT="%{$fg_bold[cyan]%}%~ %{$fg_bold[yellow]%}$%{$reset_color%} "
-
-## auto update window title
-# case $TERM in
-#  *xterm*)
-#    precmd () {print -Pn "\e]0;%n@%M: %~\a"}
-#  ;;
-# esac
-##
