@@ -10,6 +10,7 @@ autoload -Uz compinit; compinit
 autoload -U colors; colors
 setopt histignorealldups correct autocd \
        notify menucomplete sharehistory
+unsetopt nomatch
 
 # vi key bindings
 bindkey -v
