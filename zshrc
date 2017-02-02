@@ -1,5 +1,3 @@
-source ~/.zprofile
-
 # history file and size
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -35,7 +33,7 @@ compdef _gnu_generic cfdisk fdisk df udisks free more mv wc head tail tee \
 
 zstyle :compinstall filename '~/.zshrc'
 
-# color completions 
+# color completions
 zstyle ':completion:*' list-colors ''
 
 # matchers for autocompletion (that is case insensitive)
@@ -47,3 +45,5 @@ zstyle ':completion:*' menu select
 
 # simple color prompt
 PROMPT="%{$fg_bold[cyan]%}%~ %{$fg_bold[yellow]%}$%{$reset_color%} "
+
+source ~/.zzprofile
