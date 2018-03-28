@@ -38,10 +38,6 @@ zstyle :compinstall filename '~/.zshrc'
 # color completions 
 zstyle ':completion:*' list-colors ''
 
-# matchers for autocompletion (that is case insensitive)
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-zstyle ':completion:*:*:git:files' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-
 # arrow key selection for completions
 zstyle ':completion:*' menu select
 
