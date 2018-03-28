@@ -42,4 +42,4 @@ zstyle ':completion:*' menu select
 # simple color prompt
 PROMPT="%{$fg_bold[cyan]%}%~ %{$fg_bold[yellow]%}$%{$reset_color%} "
 
-source ~/.zzprofile
+source ~/.zzprofile.zsh
