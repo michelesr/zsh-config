@@ -1,4 +1,13 @@
-source ~/.zprofile
+# NOTE: envars should go in ~/.zshenv
+
+# X autostart on tty1
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+
+# always run terminal in a tmux session
+source ~/Projects/simple-zshrc/tmux_always
+
+# reload zsh one time to fix powerline prompt
+# [ -z $RL_SH ] && RL_SH=1 exec zsh
 
 # history file and size
 HISTFILE=~/.histfile
@@ -16,13 +25,13 @@ unsetopt nomatch
 bindkey -v
 
 # allow delete over start of insert mode
-bindkey "^W" backward-kill-word    # vi-backward-kill-word
-bindkey "^H" backward-delete-char  # vi-backward-delete-char
-bindkey "^U" kill-line             # vi-kill-line
-bindkey "^?" backward-delete-char  # vi-backward-delete-char
+bindkey "^W" backward-kill-word
+bindkey "^H" backward-delete-char
+bindkey "^U" kill-line
+bindkey "^?" backward-delete-char
 
 # history key bindings (arrow and ^R)
-bindkey '^R' history-incremental-search-backward
+# bindkey '^R' history-incremental-search-backward
 bindkey '^[[A' history-beginning-search-backward
 bindkey '^[[B' history-beginning-search-forward
 
@@ -35,11 +44,31 @@ compdef _gnu_generic cfdisk fdisk df udisks free more mv wc head tail tee \
 
 zstyle :compinstall filename '~/.zshrc'
 
-# color completions 
+# color completions
 zstyle ':completion:*' list-colors ''
 
 # arrow key selection for completions
 zstyle ':completion:*' menu select
 
 # simple color prompt
-PROMPT="%{$fg_bold[cyan]%}%~ %{$fg_bold[yellow]%}$%{$reset_color%} "
+#PROMPT="%{$fg_bold[cyan]%}%~ %{$fg_bold[yellow]%}$%{$reset_color%} "
+
+source /bin/aws_zsh_completer.sh
+source <(awless completion zsh)
+
+source /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+source /usr/bin/virtualenvwrapper.sh
+
+source ~/Projects/simple-zshrc/tmux_arch_pathfix
+source ~/Projects/simple-zshrc/xclip_aliases
+source ~/Projects/jump/jump
+source ~/Projects/glocate/glocate
+source ~/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+
+source ~/.bash_aliases
+
+eval "$(rbenv init -)"
+eval $(keychain -q --eval --agents ssh --nogui -Q ~/.ssh/id_ed25519)
