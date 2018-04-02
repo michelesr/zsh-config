@@ -70,5 +70,4 @@ source /usr/share/fzf/completion.zsh
 
 source ~/.bash_aliases
 
-eval "$(rbenv init -)"
 eval $(keychain -q --eval --agents ssh --nogui -Q ~/.ssh/id_ed25519)
