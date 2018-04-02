@@ -4,7 +4,7 @@
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
 
 # always run terminal in a tmux session
-source ~/Projects/simple-zshrc/tmux_always
+source ~/Projects/zsh-config/tmux_always
 
 # reload zsh one time to fix powerline prompt
 # [ -z $RL_SH ] && RL_SH=1 exec zsh
@@ -59,8 +59,8 @@ source <(awless completion zsh)
 source /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 source /usr/bin/virtualenvwrapper.sh
 
-source ~/Projects/simple-zshrc/tmux_arch_pathfix
-source ~/Projects/simple-zshrc/xclip_aliases
+source ~/Projects/zsh-config/tmux_arch_pathfix
+source ~/Projects/zsh-config/xclip_aliases
 source ~/Projects/jump/jump
 source ~/Projects/glocate/glocate
 source ~/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
