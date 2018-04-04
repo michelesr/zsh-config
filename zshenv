@@ -9,10 +9,7 @@ eval "$(rbenv init -)"
 eval "$(pyenv init -)"
 
 # NOTE: this could get overriden by /private/etc/zprofile
-path=(
-  $(rbenv root) $(pyenv root) $GOPATH/bin
-  /usr/local/opt/coreutils/libexec/gnubin /usr/local/sbin $path
-)
+path=($GOPATH/bin /usr/local/opt/coreutils/libexec/gnubin /usr/local/sbin $path)
 
 typeset -U MANPATH GOPATH
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
