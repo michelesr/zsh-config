@@ -1,17 +1,16 @@
-typeset -U path fpath
+typeset -U path fpath PATH FPATH MANPATH GOPATH
 
 fpath=(~/.zsh/func /usr/local/share/zsh-completions $fpath)
 
 # this is needed to load pyenv and rbenv
 path=(/usr/local/bin $path)
 
-eval "$(rbenv init -)"
-eval "$(pyenv init -)"
-
 # NOTE: this could get overriden by /private/etc/zprofile
 path=($GOPATH/bin /usr/local/opt/coreutils/libexec/gnubin /usr/local/sbin $path)
 
-typeset -U MANPATH GOPATH
+eval "$(rbenv init -)"
+eval "$(pyenv init -)"
+
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export GOPATH="$HOME/Projects/go"
 
