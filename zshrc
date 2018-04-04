@@ -1,4 +1,3 @@
-echo rc
 # NOTE: envars should go in ~/.zshenv
 
 # X autostart on tty1
