@@ -40,6 +40,28 @@ zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' menu select
 
 # simple color prompt
-PROMPT="%{$fg_bold[cyan]%}%~ %{$fg_bold[yellow]%}$%{$reset_color%} "
+# PROMPT="%{$fg_bold[cyan]%}%~ %{$fg_bold[yellow]%}$%{$reset_color%} "
 
-source ~/.zzprofile.zsh
+source /usr/local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+source ~/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/Projects/zsh-config/tmux_always
+source ~/Projects/zsh-config/xclip_aliases
+source ~/Projects/jump/jump
+source ~/Projects/glocate/glocate
+source /usr/local/bin/virtualenvwrapper.sh
+source <(awless completion zsh)
+source ~/.fzf.zsh
+
+alias be='bundle exec'
+alias vim='nvim'
+alias vimdiff='nvim -d'
+alias vi='vim'
+alias kc='kubectl'
+alias grep='grep --color=auto'
+alias ls='ls -G'
+alias ll='ls -l'
+alias la='ll -a'
+
+infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > /tmp/$TERM.ti
+tic /tmp/$TERM.ti
+ssh-add -K ~/.ssh/id_ed25519 2> /dev/null
