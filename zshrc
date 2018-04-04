@@ -1,3 +1,4 @@
+echo rc
 # NOTE: envars should go in ~/.zshenv
 
 # X autostart on tty1
@@ -59,7 +60,6 @@ source <(awless completion zsh)
 source /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 source /usr/bin/virtualenvwrapper.sh
 
-source ~/Projects/zsh-config/tmux_arch_pathfix
 source ~/Projects/zsh-config/xclip_aliases
 source ~/Projects/jump/jump
 source ~/Projects/glocate/glocate
