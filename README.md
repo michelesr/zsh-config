@@ -20,9 +20,10 @@ I added a script to re-source `.zshenv` on tmux start, this is a workaround for 
 
 ## xclip-aliases
 
-This is a set of alias to deal with different clipboards.
+This is a set of aliases to deal with different buffer (X for GNU/Linux, OS X
+buffer, and tmux). `xin` and `xout` are not available in `osx` branch.
 
-Requirements: *xclip*
+In GNU/Linux environments, be sure to have the `xclip` command available.
 
 **Copy** text to X **primary** buffer:
 
