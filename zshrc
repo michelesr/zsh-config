@@ -44,6 +44,7 @@ zstyle ':completion:*' menu select
 
 source /usr/local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 source ~/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 source ~/Projects/zsh-config/tmux_always
 source ~/Projects/zsh-config/xclip_aliases
 source ~/Projects/jump/jump
@@ -58,7 +59,7 @@ alias vimdiff='nvim -d'
 alias vi='vim'
 alias kc='kubectl'
 alias grep='grep --color=auto'
-alias ls='ls -G'
+alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -l'
 alias la='ll -a'
 
