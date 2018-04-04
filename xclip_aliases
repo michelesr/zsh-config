@@ -1,9 +1,5 @@
-# xclip alias
-#alias xin='xclip -in -selection primary'
-#alias xout='xclip -out -selection primary'
+# os x buffers aliases
 alias cin='pbcopy'
 alias cout='pbpaste'
-#alias xtoc='xout | cin'
-#alias ctox='cout | xin'
 alias tout='tmux show-buffer'
 alias tin='xargs -0 tmux set-buffer'
