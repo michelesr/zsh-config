@@ -1,3 +1,5 @@
+source ~/Projects/zsh-config/tmux_always
+
 # history file and size
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -45,7 +47,6 @@ zstyle ':completion:*' menu select
 source /usr/local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 source ~/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-source ~/Projects/zsh-config/tmux_always
 source ~/Projects/zsh-config/xclip_aliases
 source ~/Projects/jump/jump
 source ~/Projects/glocate/glocate
