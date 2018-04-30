@@ -6,9 +6,6 @@
 # always run terminal in a tmux session
 source ~/Projects/zsh-config/tmux_always
 
-# reload zsh one time to fix powerline prompt
-# [ -z $RL_SH ] && RL_SH=1 exec zsh
-
 # history file and size
 HISTFILE=~/.histfile
 HISTSIZE=10000
