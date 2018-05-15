@@ -49,7 +49,6 @@ source ~/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source ~/Projects/zsh-config/xclip_aliases
 source ~/Projects/jump/jump
-source ~/Projects/glocate/glocate
 source /usr/local/bin/virtualenvwrapper.sh
 source <(awless completion zsh)
 source ~/.fzf.zsh
@@ -63,6 +62,8 @@ alias grep='grep --color=auto'
 alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -l'
 alias la='ll -a'
+alias em='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
 
 infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > /tmp/$TERM.ti
 tic /tmp/$TERM.ti
