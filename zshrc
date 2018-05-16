@@ -58,7 +58,6 @@ source /usr/bin/virtualenvwrapper.sh
 
 source ~/Projects/zsh-config/xclip_aliases
 source ~/Projects/jump/jump
-source ~/Projects/glocate/glocate
 source ~/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source /usr/share/fzf/key-bindings.zsh
