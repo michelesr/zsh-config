@@ -2,6 +2,7 @@
 
 # X autostart on tty1
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+[[ -z $DISPLAY && $XDG_VTNR -eq 2 ]] && exec nvidia-xrun
 
 # always run terminal in a tmux session
 source ~/Projects/zsh-config/tmux_always
