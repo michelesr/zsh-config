@@ -5,7 +5,7 @@ else
   # avoid duplicates in paths
   typeset -U path fpath PATH FPATH MANPATH GOPATH
 
-  export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+  export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
   export GOPATH="$HOME/Projects/go"
 
   export RANGER_LOAD_DEFAULT_RC=FALSE
@@ -20,7 +20,7 @@ else
   path=(/usr/local/bin $path)
 
   # NOTE: this could get overriden by /private/etc/zprofile
-  path=($GOPATH/bin /usr/local/opt/coreutils/libexec/gnubin /usr/local/sbin $path)
+  path=($GOPATH/bin /usr/local/opt/coreutils/libexec/gnubin /usr/local/opt/findutils/libexec/gnubin /usr/local/sbin $path)
 
   eval "$(rbenv init -)"
   eval "$(pyenv init -)"
