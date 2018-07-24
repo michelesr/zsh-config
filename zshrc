@@ -2,7 +2,7 @@
 
 # disable nvidia if not required and startx
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && \
-  ~/Projects/zsh-config/disable_nvidia_bus && \
+  ~/.scripts/disable_nvidia.sh && \
   exec startx
 
 [[ -z $DISPLAY && $XDG_VTNR -eq 2 ]] && exec nvidia-xrun
