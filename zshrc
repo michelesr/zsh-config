@@ -1,10 +1,7 @@
 # NOTE: envars should go in ~/.zshenv
 
-# disable nvidia if not required and startx
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && \
-  ~/.scripts/disable_nvidia.sh && \
-  exec startx
-
+# X autostart on tty1
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
 [[ -z $DISPLAY && $XDG_VTNR -eq 2 ]] && exec nvidia-xrun
 
 # always run terminal in a tmux session
