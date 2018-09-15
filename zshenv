@@ -11,4 +11,4 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 export path=($GOPATH/bin $path)
 
 eval "$(rbenv init -)"
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
