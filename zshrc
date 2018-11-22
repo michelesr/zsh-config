@@ -44,7 +44,7 @@ zstyle ':completion:*' menu select
 # simple color prompt
 # PROMPT="%{$fg_bold[cyan]%}%~ %{$fg_bold[yellow]%}$%{$reset_color%} "
 
-source /usr/local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+source /usr/local/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 source ~/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source ~/Projects/zsh-config/xclip_aliases
@@ -64,6 +64,7 @@ alias ll='ls -l'
 alias la='ll -a'
 alias em='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+alias poweroff="osascript -e 'tell app \"System Events\" to shut down'"
 
 infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > /tmp/$TERM.ti
 tic /tmp/$TERM.ti
