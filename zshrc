@@ -65,5 +65,3 @@ source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
 source ~/.bash_aliases
-
-eval $(keychain -q --eval --agents ssh --nogui -Q ~/.ssh/id_ed25519)
