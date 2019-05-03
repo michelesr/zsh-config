@@ -2,7 +2,7 @@ source ~/Projects/zsh-config/tmux_always
 
 # history file and size
 HISTFILE=~/.histfile
-HISTSIZE=10000
+HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
 
 # general options
