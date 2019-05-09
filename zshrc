@@ -66,6 +66,8 @@ alias j='jump'
 alias em='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
 alias poweroff="osascript -e 'tell app \"System Events\" to shut down'"
+alias h='~/Projects/devops-tools/infrastructure/cfn/product_blueprints/eks/helm-wrapper.sh'
+alias dc='docker-compose'
 
 infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > /tmp/$TERM.ti
 tic /tmp/$TERM.ti
