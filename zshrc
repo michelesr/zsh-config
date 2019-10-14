@@ -71,4 +71,4 @@ alias dc='docker-compose'
 
 infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > /tmp/$TERM.ti
 tic /tmp/$TERM.ti
-ssh-add -K ~/.ssh/id_ed25519 2> /dev/null
+#ssh-add -K ~/.ssh/id_ed25519 2> /dev/null
