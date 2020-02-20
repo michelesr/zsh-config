@@ -9,6 +9,3 @@ export GOPATH=$HOME/Projects/go
 export RANGER_LOAD_DEFAULT_RC=FALSE
 
 export path=($GOPATH/bin ~/.cargo/bin $path)
-
-eval "$(rbenv init -)"
-# eval "$(pyenv init -)"
