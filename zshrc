@@ -54,7 +54,7 @@ zstyle ':completion:*' menu select
 source /bin/aws_zsh_completer.sh
 source <(awless completion zsh)
 
-source /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+source /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
 source /usr/bin/virtualenvwrapper.sh
 
 source ~/Projects/zsh-config/xclip_aliases
