@@ -1,9 +1,18 @@
-# xclip alias
-alias xin='xclip -in -selection primary'
-alias xout='xclip -out -selection primary'
-alias cin='xclip -in -selection clipboard'
-alias cout='xclip -out -selection clipboard'
-alias xtoc='xout | cin'
-alias ctox='cout | xin'
-alias tout='tmux show-buffer'
-alias tin='xargs --null tmux set-buffer'
+#!/usr/bin/zsh
+
+if [[ "${XDG_SESSION_TYPE}" == 'wayland' ]]; then
+  alias xin='wl-copy -p'
+  alias xout='wl-paste -p'
+  alias cin='wl-copy'
+  alias cout='wl-paste'
+elif [[ "${XDG_SESSION_TYPE}" == 'x11' ]]; then
+  alias xin='xclip -in -selection primary'
+  alias xout='xclip -out -selection primary'
+  alias cin='xclip -in -selection clipboard'
+  alias cout='xclip -out -selection clipboard'
+fi
+
+if [[ "${TMUX}" != '' ]]; then
+  alias tin='xargs --null tmux set-buffer'
+  alias tout='tmux show-buffer'
+fi
