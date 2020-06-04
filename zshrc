@@ -1,8 +1,7 @@
 # NOTE: envars should go in ~/.zshenv
 
-# X autostart on tty1
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
-[[ -z $DISPLAY && $XDG_VTNR -eq 2 ]] && exec nvidia-xrun
+# nvidia-xrun autostart on tty2
+# [[ -z $DISPLAY && $XDG_VTNR -eq 2 ]] && exec nvidia-xrun
 
 # always run terminal in a tmux session
 source ~/Projects/zsh-config/tmux_always
@@ -28,11 +27,6 @@ bindkey "^H" backward-delete-char
 bindkey "^U" kill-line
 bindkey "^?" backward-delete-char
 
-# history key bindings (arrow and ^R)
-# bindkey '^R' history-incremental-search-backward
-bindkey '^[[A' history-beginning-search-backward
-bindkey '^[[B' history-beginning-search-forward
-
 # autogenerate completion for gnu generic commands from --help
 compdef _gnu_generic cfdisk fdisk df udisks free more mv wc head tail tee \
     printenv script htop lshw lscpi pstree vmstat fsck mkfs fdformat shasum \
@@ -47,9 +41,6 @@ zstyle ':completion:*' list-colors ''
 
 # arrow key selection for completions
 zstyle ':completion:*' menu select
-
-# simple color prompt
-#PROMPT="%{$fg_bold[cyan]%}%~ %{$fg_bold[yellow]%}$%{$reset_color%} "
 
 source /bin/aws_zsh_completer.sh
 source <(awless completion zsh)
