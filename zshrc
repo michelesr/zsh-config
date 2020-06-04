@@ -54,4 +54,35 @@ source ~/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
-source ~/.bash_aliases
+# ls formatting and shortcuts
+alias ls='ls --group-directories-first --time-style=+"%d/%m/%Y %H:%M" --color=auto'
+alias ll='ls -l'
+alias la='ls -la'
+
+# color output and ignore dirs unless -r is set
+alias grep='grep --color=tty -d skip'
+
+# override prompt with a simple $
+alias sp='export PS1="$ "; unset RPS1'
+
+# safer commands
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -I'
+
+# jump to marked directories
+alias j='jump'
+
+# reload zsh
+alias rl='exec zsh'
+
+# nvim
+alias nv='nvim'
+alias vimdiff='nvim -d'
+alias xxd='hexdump -f ~/.local/share/hexdump-format-file'
+
+# kubernetes cli
+alias kc='kubectl'
+
+# hack
+alias pmake='make -f <(sed "s/docker run/podman run --userns=keep-id/" Makefile)'
