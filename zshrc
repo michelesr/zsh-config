@@ -29,6 +29,9 @@ unsetopt nomatch
 # share history between sessions and remove duplicates
 setopt histignorealldups sharehistory
 
+# automatically select first entry in the completion menu when pressing tab
+setopt menucomplete
+
 # notify immediately when background jobs finish rather than on next prompt
 setopt notify
 
