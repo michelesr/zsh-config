@@ -1,5 +1,8 @@
-# os x buffers aliases
+#!/usr/bin/zsh
+
 alias cin='pbcopy'
 alias cout='pbpaste'
-alias tout='tmux show-buffer'
-alias tin='xargs -0 tmux set-buffer'
+if [[ "${TMUX}" != '' ]]; then
+  alias tin='xargs --null tmux set-buffer'
+  alias tout='tmux show-buffer'
+fi

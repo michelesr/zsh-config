@@ -6,13 +6,14 @@ else
   typeset -U path fpath PATH FPATH MANPATH GOPATH
 
   export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
-  export GOPATH="$HOME/Projects/go"
 
-  export RANGER_LOAD_DEFAULT_RC=FALSE
+  export EDITOR='vim'
+  export WORKON_HOME=$HOME/.virtualenvs
   export VAULT_ADDR=https://vault.devops.citizensadvice.org.uk
-  export WORKON_HOME=~/.virtualenvs
+  export GOPATH=$HOME/Projects/go
+  export RANGER_LOAD_DEFAULT_RC=FALSE
+
   export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-  export EDITOR=nvim
 
   fpath=(~/.zsh/func /usr/local/share/zsh-completions $fpath)
 
