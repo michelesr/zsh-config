@@ -27,15 +27,6 @@ bindkey "^H" backward-delete-char
 bindkey "^U" kill-line
 bindkey "^?" backward-delete-char
 
-# autogenerate completion for gnu generic commands from --help
-compdef _gnu_generic cfdisk fdisk df udisks free more mv wc head tail tee \
-    printenv script htop lshw lscpi pstree vmstat fsck mkfs fdformat shasum \
-    netstat ftp curl touch stat paste tr aspell split csplit zathura nl fold \
-    transmission-remote transmission-cli transmission-create transmission-daemon \
-    transmission-edit transmission-remote transmission-show
-
-zstyle :compinstall filename '~/.zshrc'
-
 # color completions
 zstyle ':completion:*' list-colors ''
 
