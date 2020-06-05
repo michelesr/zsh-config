@@ -27,6 +27,13 @@ bindkey "^H" backward-delete-char
 bindkey "^U" kill-line
 bindkey "^?" backward-delete-char
 
+# start typing and use arrow keys to search matches in the history
+bindkey '^[[A' history-beginning-search-backward
+bindkey '^[[B' history-beginning-search-forward
+
+# autogenerate completion for gnu generic commands from --help
+compdef _gnu_generic df
+
 # color completions
 zstyle ':completion:*' list-colors ''
 
