@@ -15,8 +15,17 @@ SAVEHIST=$HISTSIZE
 autoload -Uz compinit; compinit
 autoload -U colors; colors
 
+# if can't expand regex, don't fail and just leave it as it is
 unsetopt nomatch
-setopt histignorealldups sharehistory notify correct
+
+# share history between sessions and remove duplicates
+setopt histignorealldups sharehistory
+
+# notify immediately when background jobs finish rather than on next prompt
+setopt notify
+
+# try to suggest corrections for typos before running a command
+setopt correct
 
 # vi key bindings
 bindkey -v
