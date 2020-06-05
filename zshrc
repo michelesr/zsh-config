@@ -2,13 +2,25 @@
 # always run terminal in a tmux session
 source ~/Projects/zsh-config/tmux_always
 
-# history file and size
-HISTFILE=~/.zsh_history
+# lines to save in memory
 HISTSIZE=1000000
-SAVEHIST=$HISTSIZE
 
-# general options
+# history file
+HISTFILE=~/.zsh_history
+
+# lines to save in the history filefile
+SAVEHIST=${HISTSIZE}
+
+# initialize completion engine
 autoload -Uz compinit; compinit
+
+# helper to define arrays to use to print colored output
+#
+# e.g.
+#   echo ${fg[red]}foo ${reset_color}bar
+#
+# see the code with:
+#   which colors
 autoload -U colors; colors
 
 # if can't expand regex, don't fail and just leave it as it is
@@ -23,37 +35,48 @@ setopt notify
 # try to suggest corrections for typos before running a command
 setopt correct
 
-# vi key bindings
+# enable vi mode
 bindkey -v
 
-# allow delete over start of insert mode
+# in insert mode: delete a word
 bindkey "^W" backward-kill-word
+# in insert mode: delete a char
 bindkey "^H" backward-delete-char
-bindkey "^U" kill-line
+# in insert mode: delete a line
+bindkey "^U" backward-kill-line
+# in insert mode: delete a char with backspace
 bindkey "^?" backward-delete-char
 
-# start typing and use arrow keys to search matches in the history
+# start typing and use up/down arrow keys to search matches in the history
 bindkey '^[[A' history-beginning-search-backward
 bindkey '^[[B' history-beginning-search-forward
 
 # autogenerate completion for gnu generic commands from --help
 compdef _gnu_generic df
 
-# color completions
+# colored entries in the completion menu
 zstyle ':completion:*' list-colors ''
 
-# arrow key selection for completions
+# use arrow keys to move in the completion menu
 zstyle ':completion:*' menu select
 
+# completions for aws and awless
 source /bin/aws_zsh_completer.sh
 source <(awless completion zsh)
 
+# powerline prompt
 source /usr/local/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
+# clipboard management aliases (e.g. cin out)
 source ~/Projects/zsh-config/xclip_aliases
+
+# mark directories and jump easily
 source ~/Projects/jump/jump
+
+# syntax highlighting for the zsh shell
 source ~/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# fzf bindings and completions
 source ~/.fzf.zsh
 
 infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > /tmp/$TERM.ti
