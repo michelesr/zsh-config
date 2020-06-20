@@ -1,8 +1,5 @@
 # NOTE: envars should go in ~/.zshenv
 
-# nvidia-xrun autostart on tty2
-# [[ -z $DISPLAY && $XDG_VTNR -eq 2 ]] && exec nvidia-xrun
-
 # always run terminal in a tmux session
 source ~/Projects/zsh-config/tmux_always
 
