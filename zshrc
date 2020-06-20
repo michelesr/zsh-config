@@ -95,7 +95,7 @@ source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
 # gnome keyring support
-eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh) && export SSH_AUTH_SOCK
+eval $(gnome-keyring-daemon --start) && export SSH_AUTH_SOCK
 
 # ls formatting and shortcuts
 alias ls='ls --group-directories-first --time-style=+"%d/%m/%Y %H:%M" --color=auto'
