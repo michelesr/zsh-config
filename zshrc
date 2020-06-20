@@ -1,4 +1,4 @@
-if [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+if [[ -z $TMUX && -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   export \
     LIBVA_DRIVER_NAME=iHD \
     OMP_WAIT_POLICY=passive \
@@ -93,6 +93,9 @@ source ~/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # fzf bindings and completions
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+
+# gnome keyring support
+eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh) && export SSH_AUTH_SOCK
 
 # ls formatting and shortcuts
 alias ls='ls --group-directories-first --time-style=+"%d/%m/%Y %H:%M" --color=auto'
