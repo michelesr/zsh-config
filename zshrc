@@ -6,6 +6,7 @@ if [[ -z $TMUX && -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
     QT_QPA_PLATFORMTHEME=qt5ct \
     MOZ_ENABLE_WAYLAND=1 \
     XDG_CURRENT_DESKTOP=sway
+    XDG_SESSION_TYPE=wayland
 
   exec sway
 fi
