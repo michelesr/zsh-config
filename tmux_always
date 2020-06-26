@@ -2,10 +2,5 @@
 # if session is not present, a new one will start
 
 if [[ "$TMUX" == "" ]] ; then
-  if tmux attach 2>/dev/null ; then
-    :
-  else
-    tmux
-  fi
-  exit 0
+  exec tmux new-session -A -s 0
 fi
