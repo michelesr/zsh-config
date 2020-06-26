@@ -7,4 +7,4 @@ export \
   VAULT_ADDR=https://vault.devops.citizensadvice.org.uk \
   GOPATH=$HOME/Projects/go \
   RANGER_LOAD_DEFAULT_RC=FALSE \
-  path=($GOPATH/bin ~/.cargo/bin $path)
+  path=($GOPATH/bin ~/.cargo/bin /usr/local/bin $path)
