@@ -1,15 +1,5 @@
-if [[ -z $TMUX && -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  export \
-    LIBVA_DRIVER_NAME=iHD \
-    OMP_WAIT_POLICY=passive \
-    QT_QPA_PLATFORM=wayland \
-    QT_QPA_PLATFORMTHEME=qt5ct \
-    MOZ_ENABLE_WAYLAND=1 \
-    XDG_CURRENT_DESKTOP=sway
-    XDG_SESSION_TYPE=wayland
-
-  exec sway
-fi
+# start graphical session if shell runs on virtual terminal 1
+source ~/Projects/zsh-config/desktop_session
 
 # always run terminal in a tmux session
 source ~/Projects/zsh-config/tmux_always
