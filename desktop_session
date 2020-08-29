@@ -1,12 +1,11 @@
 if [[ -z $TMUX && -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  export \
-    LIBVA_DRIVER_NAME=iHD \
-    OMP_WAIT_POLICY=passive \
-    QT_QPA_PLATFORM=wayland \
-    QT_QPA_PLATFORMTHEME=qt5ct \
-    MOZ_ENABLE_WAYLAND=1 \
-    XDG_CURRENT_DESKTOP=sway \
-    XDG_SESSION_TYPE=wayland
+  export LIBVA_DRIVER_NAME=iHD
+  export OMP_WAIT_POLICY=passive
+  export QT_QPA_PLATFORM=wayland
+  export QT_QPA_PLATFORMTHEME=qt5ct
+  export MOZ_ENABLE_WAYLAND=1
+  export XDG_CURRENT_DESKTOP=sway
+  export XDG_SESSION_TYPE=wayland
 
   exec sway
 fi
