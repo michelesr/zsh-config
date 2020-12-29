@@ -1,0 +1,11 @@
+if [[ -z $TMUX && -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  export LIBVA_DRIVER_NAME=iHD
+  export OMP_WAIT_POLICY=passive
+  export QT_QPA_PLATFORM=xcb
+  export QT_QPA_PLATFORMTHEME=qt5ct
+  export MOZ_ENABLE_WAYLAND=0
+  export XDG_CURRENT_DESKTOP=i3
+  export XDG_SESSION_TYPE=x11
+
+  exec startx
+fi
