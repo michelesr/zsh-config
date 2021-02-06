@@ -120,3 +120,6 @@ alias kc='kubectl'
 
 # hack
 alias pmake='make -f <(sed "s/docker run/podman run --userns=keep-id/" Makefile)'
+
+# docker
+alias docker='podman'
