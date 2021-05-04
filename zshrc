@@ -1,5 +1,6 @@
-# start graphical session if shell runs on virtual terminal 1
 source ~/Projects/zsh-config/desktop_session
+source ~/Projects/zsh-config/desktop_session_i3
+source ~/Projects/zsh-config/desktop_session_i3_nvidia
 
 # always run terminal in a tmux session
 source ~/Projects/zsh-config/tmux_always
@@ -123,3 +124,6 @@ alias pmake='make -f <(sed "s/docker run/podman run --userns=keep-id/" Makefile)
 
 # docker
 alias docker='podman'
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
