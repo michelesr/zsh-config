@@ -71,7 +71,7 @@ source /bin/aws_zsh_completer.sh
 source <(awless completion zsh)
 
 # powerline prompt
-source /usr/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
+source /usr/share/powerline/bindings/zsh/powerline.zsh
 
 # clipboard management aliases (e.g. cin out)
 source ~/Projects/zsh-config/xclip_aliases
