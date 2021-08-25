@@ -5,3 +5,4 @@ export EDITOR='vim'
 export VAULT_ADDR=https://vault.devops.citizensadvice.org.uk
 export GOPATH=$HOME/Projects/go
 export RANGER_LOAD_DEFAULT_RC=FALSE
+export POWERLINE_NO_ZSH_TMUX=1
