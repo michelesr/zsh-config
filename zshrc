@@ -67,17 +67,13 @@ zstyle ':completion:*' menu select
 source /bin/aws_zsh_completer.sh
 source <(awless completion zsh)
 
-# powerline prompt
-source /usr/local/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+source /usr/local/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # clipboard management aliases (e.g. cin out)
 source ~/Projects/zsh-config/xclip_aliases
 
 # mark directories and jump easily
 source ~/Projects/jump/jump
-
-# syntax highlighting for the zsh shell
-source ~/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # fzf bindings and completions
 source ~/.fzf.zsh
