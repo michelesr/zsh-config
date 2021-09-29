@@ -106,8 +106,6 @@ alias j='jump'
 alias rl='exec zsh'
 
 # nvim
-alias vim='nvim'
-alias vi='vim'
 alias nv='nvim'
 alias vimdiff='nvim -d'
 alias xxd='hexdump -f ~/.local/share/hexdump-format-file'
