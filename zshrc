@@ -1,4 +1,3 @@
-# NOTE: envars should go in ~/.zshenv
 # always run terminal in a tmux session
 source ~/Projects/zsh-config/tmux_always
 
@@ -67,6 +66,7 @@ zstyle ':completion:*' menu select
 source /bin/aws_zsh_completer.sh
 source <(awless completion zsh)
 
+# powerline prompt
 source /usr/local/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # clipboard management aliases (e.g. cin out)
@@ -74,6 +74,9 @@ source ~/Projects/zsh-config/xclip_aliases
 
 # mark directories and jump easily
 source ~/Projects/jump/jump
+
+# syntax highlighting for the zsh shell
+source ~/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # fzf bindings and completions
 source ~/.fzf.zsh
@@ -113,7 +116,6 @@ alias xxd='hexdump -f ~/.local/share/hexdump-format-file'
 # kubernetes cli
 alias kc='kubectl'
 
-alias be='bundle exec'
 alias poweroff="osascript -e 'tell app \"System Events\" to shut down'"
 
 #ssh-add -K ~/.ssh/id_ed25519 2> /dev/null
