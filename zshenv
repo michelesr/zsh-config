@@ -15,5 +15,4 @@ else
   export POWERLINE_NO_ZSH_TMUX=1
 
   # NOTE: this could get overriden by /private/etc/zprofile
-  path=($GOPATH/bin /usr/local/opt/coreutils/libexec/gnubin /usr/local/opt/findutils/libexec/gnubin /usr/local/sbin $path)
-fi
+  path=($GOPATH/bin /usr/local/opt/coreutils/libexec/gnubin /usr/local/opt/findutils/libexec/gnubin /usr/local/sbin /usr/local/bin $path)
