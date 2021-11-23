@@ -66,9 +66,8 @@ zstyle ':completion:*' list-colors ''
 # use arrow keys to move in the completion menu
 zstyle ':completion:*' menu select
 
-# completions for aws and awless
+# completions for aws cli
 source /bin/aws_zsh_completer.sh
-source <(awless completion zsh)
 
 # powerline prompt
 source /usr/share/powerline/bindings/zsh/powerline.zsh
