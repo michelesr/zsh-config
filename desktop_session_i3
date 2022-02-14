@@ -1,4 +1,4 @@
-if [[ -z $TMUX && -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+if [[ -z $TMUX && -z $DISPLAY && $XDG_VTNR -eq 2 ]]; then
   export LIBVA_DRIVER_NAME=iHD
   export OMP_WAIT_POLICY=passive
   export QT_QPA_PLATFORM=xcb
