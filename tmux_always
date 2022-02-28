@@ -1,6 +1,8 @@
 # Sourcing this will make terminal try to attach a tmux session
 # if session is not present, a new one will start
 
-if [[ "$TMUX" == "" ]] ; then
+# bypass tmux in tty6, this is if you want to run a graphic session manually or
+# tmux is stuck for some reason and you can't login properly
+if [[ "${TMUX}" == '' && "${XDG_VTNR}" != 6 ]] ; then
   exec tmux new-session -A -s 0
 fi
