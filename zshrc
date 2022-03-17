@@ -115,9 +115,6 @@ alias nv='nvim'
 alias vimdiff='nvim -d'
 alias xxd='hexdump -f ~/.local/share/hexdump-format-file'
 
-# kubernetes cli
-alias kc='kubectl'
-
 # hack
 alias pmake='make -f <(sed "s/docker run/podman run --userns=keep-id/" Makefile)'
 
