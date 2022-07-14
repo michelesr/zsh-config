@@ -3,6 +3,6 @@
 alias cin='pbcopy'
 alias cout='pbpaste'
 if [[ "${TMUX}" != '' ]]; then
-  alias tin='xargs --null tmux set-buffer'
-  alias tout='tmux show-buffer'
+  alias tin='tmux load-buffer -'
+  alias tout='tmux save-buffer -'
 fi
