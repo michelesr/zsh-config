@@ -13,6 +13,6 @@ elif [[ "${XDG_SESSION_TYPE}" == 'x11' ]]; then
 fi
 
 if [[ "${TMUX}" != '' ]]; then
-  alias tin='xargs --null tmux set-buffer'
-  alias tout='tmux show-buffer'
+  alias tin='tmux load-buffer -'
+  alias tout='tmux save-buffer -'
 fi
