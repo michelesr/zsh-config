@@ -107,9 +107,5 @@ alias nv='nvim'
 alias vimdiff='nvim -d'
 alias xxd='hexdump -f ~/.local/share/hexdump-format-file'
 
-# kubernetes cli
-alias kc='kubectl'
 
 alias poweroff="osascript -e 'tell app \"System Events\" to shut down'"
-
-#ssh-add -K ~/.ssh/id_ed25519 2> /dev/null
