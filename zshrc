@@ -62,11 +62,8 @@ zstyle ':completion:*' list-colors ''
 # use arrow keys to move in the completion menu
 zstyle ':completion:*' menu select
 
-# completions for awless
-source <(awless completion zsh)
-
 # powerline prompt
-source /usr/local/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
+source /opt/homebrew/lib/python3.10/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # clipboard management aliases (e.g. cin out)
 source ~/Projects/zsh-config/xclip_aliases
