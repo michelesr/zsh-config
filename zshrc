@@ -77,9 +77,6 @@ source ~/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # fzf bindings and completions
 source ~/.fzf.zsh
 
-infocmp $TERM | sed 's/kbs=^[hH]/kbs=\\177/' > /tmp/$TERM.ti
-tic /tmp/$TERM.ti
-
 # ls formatting and shortcuts
 alias ls='ls --group-directories-first --time-style=+"%d/%m/%Y %H:%M" --color=auto'
 alias ll='ls -l'
