@@ -63,7 +63,7 @@ zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' menu select
 
 # powerline prompt
-source /opt/homebrew/lib/python3.10/site-packages/powerline/bindings/zsh/powerline.zsh
+source /opt/homebrew/lib/python3.11/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # clipboard management aliases (e.g. cin out)
 source ~/Projects/zsh-config/xclip_aliases
