@@ -1,4 +1,4 @@
-brew_prefix="$(brew --prefix)"
+brew_prefix='/opt/homebrew'
 brew_opt="${brew_prefix}/opt"
 
 typeset -U path fpath PATH FPATH MANPATH GOPATH
