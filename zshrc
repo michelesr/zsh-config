@@ -102,7 +102,6 @@ alias rl='exec zsh'
 # nvim
 alias nv='nvim'
 alias vimdiff='nvim -d'
-alias xxd='hexdump -f ~/.local/share/hexdump-format-file'
-
+# alias xxd='hexdump -f ~/.local/share/hexdump-format-file'
 
 alias poweroff="osascript -e 'tell app \"System Events\" to shut down'"
