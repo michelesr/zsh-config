@@ -1,6 +1,5 @@
-source ~/Projects/zsh-config/desktop_session
-source ~/Projects/zsh-config/desktop_session_i3
-# source ~/Projects/zsh-config/desktop_session_i3_nvidia
+source ~/Projects/zsh-config/sessions/sway
+source ~/Projects/zsh-config/sessions/i3
 
 # always run terminal in a tmux session
 source ~/Projects/zsh-config/tmux_always
