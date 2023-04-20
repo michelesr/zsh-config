@@ -1,5 +1,6 @@
 source ~/Projects/zsh-config/sessions/sway
 source ~/Projects/zsh-config/sessions/i3
+source ~/Projects/zsh-config/sessions/gnome
 
 # always run terminal in a tmux session
 source ~/Projects/zsh-config/tmux_always
