@@ -2,7 +2,7 @@ typeset -U fpath
 fpath=($HOME/.zsh/func $fpath)
 
 export NVIM_LISTEN_ADDRESS='/tmp/nvim.pipe'
-export EDITOR="nvr -s --servername ${NVIM_LISTEN_ADDRESS} --remote-tab-wait"
+export EDITOR="nvr -s --servername ${NVIM_LISTEN_ADDRESS} +set\ bufhidden=delete --remote-tab-wait"
 
 export VISUAL=${EDITOR}
 export VAULT_ADDR=https://vault.devops.citizensadvice.org.uk
