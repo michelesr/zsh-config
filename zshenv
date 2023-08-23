@@ -6,7 +6,7 @@ fpath=($HOME/.zsh/func ${brew_prefix}/share/zsh-completions $fpath)
 
 export MANPATH="${brew_opt}/coreutils/libexec/gnuman:${brew_opt}/findutils/libexec/gnuman:${brew_opt}/gnu-sed/libexec/gnuman:$MANPATH"
 
-export NVIM_LISTEN_ADDRESS='/tmp/nvim.pipe'
+export NVIM_LISTEN_ADDRESS="$(getconf DARWIN_USER_DIR)nvim.sock"
 export EDITOR="nvr -s --servername ${NVIM_LISTEN_ADDRESS} --remote-tab-wait"
 
 export VISUAL=${EDITOR}
