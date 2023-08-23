@@ -1,7 +1,7 @@
 typeset -U fpath
 fpath=($HOME/.zsh/func $fpath)
 
-export NVIM_LISTEN_ADDRESS='/tmp/nvim.pipe'
+export NVIM_LISTEN_ADDRESS="${XDG_RUNTIME_DIR}/nvim.sock"
 export EDITOR="nvr -s --servername ${NVIM_LISTEN_ADDRESS} +set\ bufhidden=delete --remote-tab-wait"
 
 export VISUAL=${EDITOR}
