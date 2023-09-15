@@ -18,3 +18,7 @@ export JIRA_API_TOKEN=$(cat ~/.secrets/jira_api_token)
 
 # NOTE: this could get overriden by /private/etc/zprofile
 path=(${HOME}/.krew/bin $GOPATH/bin ${brew_opt}/coreutils/libexec/gnubin ${brew_opt}/findutils/libexec/gnubin ${brew_opt}/gnu-sed/libexec/gnubin /usr/local/sbin /usr/local/bin $path)
+
+# save the path and restore it later in .zprofile
+# hack to override changes from /etc/zprofile
+export OLD_PATH="${PATH}"
