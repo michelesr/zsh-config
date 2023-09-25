@@ -1,11 +1,20 @@
-brew_prefix='/opt/homebrew'
+# remove duplicates from path: only keep first occurence
+typeset -U path fpath PATH FPATH MANPATH GOPATH
+
+# initialize brew envvars
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# brew shortcuts
+brew_prefix="${HOMEBREW_PREFIX}"
 brew_opt="${brew_prefix}/opt"
 
-typeset -U path fpath PATH FPATH MANPATH GOPATH
+# add zsh-completions and user defined functions
 fpath=($HOME/.zsh/func ${brew_prefix}/share/zsh-completions $fpath)
 
+# make sure GNU utils have precedence in the MANPATH
 export MANPATH="${brew_opt}/coreutils/libexec/gnuman:${brew_opt}/findutils/libexec/gnuman:${brew_opt}/gnu-sed/libexec/gnuman:$MANPATH"
 
+# nvim remote integration
 export NVIM_LISTEN_ADDRESS="$(getconf DARWIN_USER_DIR)nvim.sock"
 export EDITOR="nvr -s +set\ bufhidden=delete --remote-tab-wait"
 
@@ -16,9 +25,10 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 export POWERLINE_NO_ZSH_TMUX=1
 export JIRA_API_TOKEN=$(cat ~/.secrets/jira_api_token)
 
-# NOTE: this could get overriden by /private/etc/zprofile
+# make sure GNU utils have precedence in the path
 path=(${HOME}/.krew/bin $GOPATH/bin ${brew_opt}/coreutils/libexec/gnubin ${brew_opt}/findutils/libexec/gnubin ${brew_opt}/gnu-sed/libexec/gnubin /usr/local/sbin /usr/local/bin $path)
 
-# save the path and restore it later in .zprofile
-# hack to override changes from /etc/zprofile
+# Apple has a /etc/zprofile that tends to override the path and lower the
+# precedence of the GNU utils so save the current path in OLD_PATH so that can be
+# restored later from ~/.zprofile
 export OLD_PATH="${PATH}"
