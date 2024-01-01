@@ -16,7 +16,7 @@ export MANPATH="${brew_opt}/coreutils/libexec/gnuman:${brew_opt}/findutils/libex
 
 # nvim remote integration
 export NVIM_LISTEN_ADDRESS="$(getconf DARWIN_USER_DIR)nvim.sock"
-export EDITOR="nvr -s +Sbhd --remote-tab-wait"
+export EDITOR="${HOME}/Projects/zsh-config/nvr_wrapper.sh"
 
 export VISUAL=${EDITOR}
 export VAULT_ADDR=https://vault.devops.citizensadvice.org.uk
