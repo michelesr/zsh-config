@@ -2,7 +2,7 @@ typeset -U fpath
 fpath=($HOME/.zsh/func $fpath)
 
 export NVIM_LISTEN_ADDRESS="${XDG_RUNTIME_DIR}/nvim.sock"
-export EDITOR="nvr -s +Sbhd --remote-tab-wait"
+export EDITOR="${HOME}/Projects/zsh-config/nvr_wrapper.sh"
 
 export VISUAL=${EDITOR}
 export VAULT_ADDR=https://vault.devops.citizensadvice.org.uk
