@@ -110,7 +110,6 @@ alias vim='nvim'
 alias vi='nvim'
 alias nv='nvim'
 alias vimdiff='nvim -d'
-alias xxd='hexdump -f ~/.local/share/hexdump-format-file'
 
 # hack
 alias pmake='make -f <(sed "s/docker run/podman run --userns=keep-id/" Makefile)'
