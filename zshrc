@@ -26,7 +26,7 @@ autoload -Uz compinit; compinit
 #   which colors
 autoload -U colors; colors
 
-# if can't expand regex, don't fail and just leave it as it is
+# if can't expand glob pattern, don't fail and just leave it as it is
 unsetopt nomatch
 
 # share history between sessions and remove duplicates
