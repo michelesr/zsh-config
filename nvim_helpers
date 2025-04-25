@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+function jump_to_nvim() {
+  for window in $(tmux list-window -F '#{window_id}'); do
+    pane=$(tmux list-panes -t ${window} -F '#{pane_id} #{pane_current_command}' | awk '/nvim/ {print $1}')
+    if [[ ${pane} != "" ]]; then
+      tmux select-window -t ${window}
+      tmux select-pane -t ${pane}
+      break
+    fi
+  done
+}

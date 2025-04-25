@@ -77,6 +77,9 @@ source ~/Projects/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # fzf bindings and completions
 source ~/.fzf.zsh
 
+# nvim helpers
+source ~/Projects/zsh-config/nvim_helpers
+
 # ls formatting and shortcuts
 alias ls='ls --group-directories-first --time-style=+"%d/%m/%Y %H:%M" --color=auto'
 alias ll='ls -l'
@@ -99,8 +102,7 @@ alias j='jump'
 # reload zsh
 alias rl='exec zsh'
 
-# nvim
-alias nvim="nvim --listen ${NVIM_LISTEN_ADDRESS}"
+function nvim() { nvr -s "$@" ; jump_to_nvim }
 alias vim='nvim'
 alias vi='nvim'
 alias nv='nvim'
