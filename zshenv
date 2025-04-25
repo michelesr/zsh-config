@@ -24,6 +24,7 @@ export GOPATH=$HOME/Projects/go
 export RANGER_LOAD_DEFAULT_RC=FALSE
 export POWERLINE_NO_ZSH_TMUX=1
 export JIRA_API_TOKEN=$(cat ~/.secrets/jira_api_token)
+export XDG_CONFIG_HOME="${HOME}/.config"
 
 # make sure GNU utils have precedence in the path
 path=(${HOME}/.krew/bin $GOPATH/bin ${brew_opt}/coreutils/libexec/gnubin ${brew_opt}/findutils/libexec/gnubin ${brew_opt}/gnu-sed/libexec/gnubin /usr/local/sbin /usr/local/bin $path)
