@@ -102,7 +102,7 @@ alias j='jump'
 # reload zsh
 alias rl='exec zsh'
 
-function nvim() { nvr -s "$@" ; jump_to_nvim }
+function nvim() { jump_to_nvim ; nvr -s "$@" }
 alias vim='nvim'
 alias vi='nvim'
 alias nv='nvim'
