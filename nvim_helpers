@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+nvim_bin=$(which nvim)
+
+# attach to an existing nvim instance or start a new one
+function nvim_remote() {
+  nvr -s --nostart "$@" || $nvim_bin "$@"
+}
+
+# automatically jump to the tmux window and pane hosting nvim
 function jump_to_nvim() {
   for window in $(tmux list-window -F '#{window_id}'); do
     pane=$(tmux list-panes -t ${window} -F '#{pane_id} #{pane_current_command}' | awk '/nvim/ {print $1}')
@@ -9,4 +17,10 @@ function jump_to_nvim() {
       break
     fi
   done
+}
+
+# only use one instance of nvim and auto-switch focus
+function nvim() {
+  jump_to_nvim
+  nvim_remote "$@"
 }
