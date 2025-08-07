@@ -26,6 +26,8 @@ export POWERLINE_NO_ZSH_TMUX=1
 export JIRA_API_TOKEN=$(cat ~/.secrets/jira_api_token)
 export XDG_CONFIG_HOME="${HOME}/.config"
 
+export GEMINI_API_KEY=$(gpg -d ~/.secrets/gemini_api_key.gpg 2>/dev/null)
+
 # make sure GNU utils have precedence in the path
 path=(${HOME}/.krew/bin $GOPATH/bin ${brew_opt}/coreutils/libexec/gnubin ${brew_opt}/findutils/libexec/gnubin ${brew_opt}/gnu-sed/libexec/gnubin /usr/local/sbin /usr/local/bin $path)
 
