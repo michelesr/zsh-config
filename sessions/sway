@@ -8,5 +8,8 @@ if [[ -z $TMUX && -z $DISPLAY && $XDG_VTNR -eq 1 ]]; then
   export XDG_CURRENT_DESKTOP=sway
   export XDG_SESSION_TYPE=wayland
 
+  # workaround for page fault on drm_fence_release()
+  # when removing the card after use in a sway session
+  export WLR_RENDER_NO_EXPLICIT_SYNC=1
   exec sway
 fi
