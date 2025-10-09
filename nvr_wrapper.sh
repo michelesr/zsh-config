@@ -4,4 +4,4 @@
 source ~/Projects/zsh-config/nvim_helpers
 
 jump_to_nvim
-exec nvr -s --remote-tab-wait -c 'set bufhidden=delete' "$@"
+nvim_remote_tab_wait "$@"
