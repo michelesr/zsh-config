@@ -7,6 +7,11 @@ function nvim_remote() {
   nvr -s --nostart "$@" || $nvim_bin "$@"
 }
 
+# to be used as EDITOR, e.g. by ./nvr_wrapper.sh
+function nvim_remote_tab_wait() {
+  nvr -s --nostart --remote-tab-wait -c 'set bufhidden=delete' "$@" || exec $nvim_bin "$@"
+}
+
 # automatically jump to the tmux window and pane hosting nvim
 function jump_to_nvim() {
   for window in $(tmux list-window -F '#{window_id}'); do
