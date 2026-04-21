@@ -109,3 +109,5 @@ alias vimdiff='nvim -d'
 # alias xxd='hexdump -f ~/.local/share/hexdump-format-file'
 
 alias poweroff="osascript -e 'tell app \"System Events\" to shut down'"
+
+source ~/Projects/zsh-config/jira_helpers
