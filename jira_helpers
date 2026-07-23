@@ -1,6 +1,11 @@
 #!/usr/bin/env zsh
-jira_set_issue() {
-  JIRA_ISSUE=$(jira issue list --plain --project CLOUD -s~Done | fzf | awk '{print $2}') && \
+jira_find_issue() {
+  JIRA_ISSUE=$(jira issue list --plain --project CLOUD -q 'status in ("Ready", "Refined", "In progress", "Review") and sprint in openSprints()' | fzf | awk '{print $2}') && \
+  jira_select_issue ${JIRA_ISSUE}
+}
+
+jira_select_issue() {
+  JIRA_ISSUE=$1
   JIRA_ISSUE_SUMMARY="${JIRA_ISSUE}$(jira issue view --plain ${JIRA_ISSUE} | grep '#' | head -n 1 | sed -E -e 's/  +//g' -e 's/#//g')" && \
   JIRA_ISSUE_BRANCH=$(sed <<<"$JIRA_ISSUE_SUMMARY" -e 's/[\t#: ]\+/_/g' -e 's/_$//' -e 's/\.//g')
 
